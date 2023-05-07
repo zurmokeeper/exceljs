@@ -37,6 +37,8 @@
     "test:native": "npm run test:full",
     "test:unit": "mocha --require spec/config/setup --require spec/config/setup-unit spec/unit --recursive",
     "test:integration": "mocha --require spec/config/setup spec/integration --recursive",
+    "test:integration1": "mocha --require spec/config/setup spec/integration/issues/issue-2247-encrytor.spec.js",
+    "test:integration2": "mocha --require spec/config/setup spec/integration/pr/test-pr-2244.spec.js",
     "test:end-to-end": "mocha --require spec/config/setup spec/end-to-end --recursive",
     "test:browser": "if [ ! -f .disable-test-browser ]; then npm run build && npm run test:jasmine; fi",
     "test:jasmine": "grunt jasmine",
@@ -97,6 +99,7 @@
   ],
   "dependencies": {
     "archiver": "^5.0.0",
+    "cfb": "^1.2.2",
     "dayjs": "^1.8.34",
     "fast-csv": "^4.3.1",
     "jszip": "^3.10.1",
