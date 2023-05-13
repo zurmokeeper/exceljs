@@ -10,7 +10,9 @@ describe('pr related issues', () => {
         await workbook.xlsx.readFile(TEST_567_XLSX_FILE_NAME, {
           password: '123456',
         });
+        // console.log('123-->', workbook);
       } catch (error) {
+        // throw error;
         // console.log('error0-->', error);
       }
     });
